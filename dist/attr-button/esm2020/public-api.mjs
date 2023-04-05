@@ -1,0 +1,6 @@
+/*
+ * Public API Surface of attr-button
+ */
+export * from './lib/attr-button/attr-button.component';
+export * from './lib/attr-button/attr-button.module';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Byb2plY3RzL2F0dHItYnV0dG9uL3NyYy9wdWJsaWMtYXBpLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztHQUVHO0FBRUgsY0FBYyx5Q0FBeUMsQ0FBQztBQUN4RCxjQUFjLHNDQUFzQyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLypcbiAqIFB1YmxpYyBBUEkgU3VyZmFjZSBvZiBhdHRyLWJ1dHRvblxuICovXG5cbmV4cG9ydCAqIGZyb20gJy4vbGliL2F0dHItYnV0dG9uL2F0dHItYnV0dG9uLmNvbXBvbmVudCc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi9hdHRyLWJ1dHRvbi9hdHRyLWJ1dHRvbi5tb2R1bGUnO1xuIl19

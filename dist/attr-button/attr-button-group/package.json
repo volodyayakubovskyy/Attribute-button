@@ -1,0 +1,10 @@
+{
+  "module": "../fesm2015/attr-button-attr-button-group.mjs",
+  "es2020": "../fesm2020/attr-button-attr-button-group.mjs",
+  "esm2020": "../esm2020/attr-button-group/attr-button-attr-button-group.mjs",
+  "fesm2020": "../fesm2020/attr-button-attr-button-group.mjs",
+  "fesm2015": "../fesm2015/attr-button-attr-button-group.mjs",
+  "typings": "attr-button-attr-button-group.d.ts",
+  "sideEffects": false,
+  "name": "attr-button/attr-button-group"
+}

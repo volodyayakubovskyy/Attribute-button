@@ -1,0 +1,119 @@
+@import "vars";
+
+.attr-button-group {
+  border: 1px solid $accent-background-color;
+  display: flex;
+  width: fit-content;
+  border-radius: 100px;
+
+  .attr-button {
+    border-radius: 0;
+
+    &:first-child {
+      border-top-left-radius: 100px;
+      border-bottom-left-radius: 100px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 100px;
+      border-bottom-right-radius: 100px;
+    }
+  }
+}
+
+.attr-button {
+  font-family: 'Manrope', 'Arial', sans-serif;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  gap: 8px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+
+  &.attr-button-small {
+    padding: 8px 16px;
+  }
+
+  &:disabled {
+    background-color: $disabled-background-color;
+    color: $disabled-color;
+    cursor: not-allowed;
+
+    svg {
+      path {
+        fill: $disabled-color;
+      }
+    }
+  }
+
+  &:focus {
+    outline: 1px dashed $primary-color;
+    outline-offset: 2px;
+  }
+
+  &.attr-button-primary:not(:disabled) {
+    background-color: $primary-color;
+    color: $default-white;
+
+    &:hover {
+      background-color: $primary-hover-color;
+    }
+
+    &:active {
+      background-color: $primary-active-color;
+    }
+
+    svg {
+      path {
+        fill: $default-white;
+      }
+    }
+  }
+
+  &.attr-button-accent:not(:disabled) {
+    background-color: $accent-background-color;
+    color: $primary-color;
+
+    &:hover {
+      background-color: $accent-background-hover-color;
+    }
+
+    &:active {
+      background-color: $accent-background-active-color;
+    }
+
+    svg {
+      path {
+        fill: $primary-color;
+      }
+    }
+  }
+
+  &.attr-button-warn:not(:disabled) {
+    background-color: $warn-background-color;
+    color: $warn-color;
+
+    &:hover {
+      background-color: $warn-background-hover-color;
+    }
+
+    &:active {
+      background-color: $warn-background-active-color;
+    }
+
+    svg {
+      path {
+        fill: $warn-color;
+      }
+    }
+  }
+}

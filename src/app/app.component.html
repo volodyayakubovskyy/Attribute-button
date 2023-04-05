@@ -1,0 +1,142 @@
+<style>
+  :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+    padding-left: 24px;
+  }
+
+  .content {
+    margin-top: 60px;
+    padding: 24px;
+  }
+</style>
+
+<!-- Toolbar -->
+<div class="toolbar"
+     role="banner">
+  Attr Button
+</div>
+
+<div class="content"
+     role="main">
+
+  <h1>Button:</h1>
+
+  <div [formGroup]="form"
+       class="form">
+    <div class="form-control">
+      <label>Button Color: </label>
+      <select class="form-control"
+              id="color"
+              formControlName="color">
+        <option [value]="'primary'">Primary</option>
+        <option [value]="'accent'">Accent</option>
+        <option [value]="'warn'">Warn</option>
+      </select>
+    </div>
+
+    <div class="form-control">
+      <label>Button Size: </label>
+      <select class="form-control"
+              id="size"
+              formControlName="size">
+        <option [value]="'default'">Default</option>
+        <option [value]="'small'">Small</option>
+      </select>
+    </div>
+
+    <div class="form-control">
+      <label for="disabled">Disabled</label>
+      <input id="disabled"
+             type="checkbox"
+             formControlName="disabled">
+    </div>
+
+    <div class="form-control">
+      <label for="hasIcon">Has Icon</label>
+      <input id="hasIcon"
+             type="checkbox"
+             formControlName="hasIcon">
+    </div>
+  </div>
+
+  <button attr-button
+          [color]="form.value.color"
+          [size]="form.value.size"
+          [disabled]="form.value.disabled"
+          [tabIndex]="1">
+    <svg *ngIf="form.value.hasIcon"
+         width="14"
+         height="14"
+         viewBox="0 0 14 14"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.79672 0.910679C6.17546 -0.303561 7.82454 -0.303559 8.20328 0.910681L8.9884 3.42774C9.15778 3.97076 9.64356 4.33842 10.1917 4.33842H12.7324C13.958 4.33842 14.4676 5.97217 13.476 6.72261L11.4206 8.27824C10.9771 8.61384 10.7916 9.20872 10.961 9.75175L11.7461 12.2688C12.1248 13.483 10.7907 14.4928 9.79913 13.7423L7.74367 12.1867C7.30023 11.8511 6.69977 11.8511 6.25633 12.1867L4.20087 13.7423C3.20931 14.4928 1.87518 13.483 2.25392 12.2688L3.03903 9.75175C3.20841 9.20872 3.02286 8.61384 2.57942 8.27824L0.523962 6.72261C-0.467599 5.97217 0.0419979 4.33842 1.26763 4.33842H3.80832C4.35644 4.33842 4.84222 3.97076 5.0116 3.42774L5.79672 0.910679Z"
+            fill="none" />
+    </svg>
+
+    Button
+  </button>
+
+  <br>
+  <br>
+
+  <h1>Button Group:</h1>
+
+  <attr-button-group>
+    <button attr-button
+            color="primary"
+            size="small"
+            [tabIndex]="2">
+      Primary
+    </button>
+
+    <button attr-button
+            color="accent"
+            size="small"
+            [tabIndex]="3">
+      Accent
+    </button>
+
+    <button attr-button
+            color="warn"
+            size="small"
+            [tabIndex]="4">
+      Warn
+    </button>
+  </attr-button-group>
+</div>
